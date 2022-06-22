@@ -1,0 +1,25 @@
+name: deploy
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  web-deploy:
+    name: Deploy for task
+    runs-on: ubuntu-latest
+                                                    
+    steps:
+       - uses: actions/checkout@v2
+       - name: ssh deploy
+         uses: easingthemes/ssh-deploy@v2.1.4
+         env:
+           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+           REMOTE_HOST: ${{ secrets.HOST }}
+           REMOTE_USER: ${{ secrets.USER }}
+           REMOTE_PORT: 22
+           SOURCE: "*"
+           TARGET: "/var/www/html"
+                                                                                                                                                                        
+
