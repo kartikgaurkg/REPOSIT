@@ -18,7 +18,7 @@ jobs:
            SSH_PRIVATE_KEY: ${{ secrets.KEY }}
            REMOTE_HOST: ${{ secrets.HOST }}
            REMOTE_USER: ${{ secrets.USER }}
-           REMOTE_PORT: 22
+           REMOTE_PORT: 22 
            SOURCE: "task"
            TARGET: "/var/www/html"
                                                                                                                                                                         
