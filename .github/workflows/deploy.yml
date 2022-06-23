@@ -19,7 +19,7 @@ jobs:
            REMOTE_HOST: ${{ secrets.HOST }}
            REMOTE_USER: ${{ secrets.USER }}
            REMOTE_PORT: 22
-           SOURCE: "/task"
+           SOURCE: "task"
            TARGET: "/var/www/html"
                                                                                                                                                                         
 
